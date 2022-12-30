@@ -9,7 +9,6 @@ const dfiles = fs.readdirSync(`${ddir}/`).filter(files => files.endsWith('.js'))
 
 
 
-
 const actionDir = 'js/plugins/bullethell/functions/actions/src';
 var BHactions = [];
 
