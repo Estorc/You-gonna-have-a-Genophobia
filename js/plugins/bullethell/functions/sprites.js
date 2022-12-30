@@ -1,6 +1,3 @@
-const imagesDir = 'img/bhsprite';
-
-
 BulletHell.prototype.loadImages = function(name) {
 
 
@@ -31,7 +28,7 @@ return this.objectsSprite[name];
 
 BHpreloadImages = function() {
 	
-let images = readdirSync(`${imagesDir}/`).filter(files => files.endsWith('.png'));
+var images = ["Aero-Stellayhem.png","beast.png","beastbiglaser.png","beastbiglaser2.png","beastdanger.png","BigBonus.png","bigthanoscarbullet.png","blueangel@4.png","Bomb@4.png","BombBullet.png","BombBulletShadow.png","BombShadow.png","bonepart1.png","bonepart2.png","bonepart3.png","boss.png","crystalStar.png","crystalStarCursor.png","crystalStarCursorLeft.png","danger.png","Death-.png","DeathAppear-@5.png","DeathAppearI@5.png","DeathI.png","Explosion@29@1.png","FEDOF-PART1.png","FEDOF-PART2.png","FEDOF-PART3.png","FEDOF-PART3left.png","FEDOF-PART4.png","FEDOF-PART4h.png","FEDOF-PART5.png","FEDOF-PART6.png","FEDOF-PART7.png","Fedof@4@7.png","FedofRight@4@7.png","flamethrower-fire.png","FloweyBomb.png","FloweyBombIgnite.png","forceField@3.png","forceFieldCore@3.png","gaster_blaster.png","gaster_blaster_laser.png","gaster_blaster_laser_left.png","gaster_blaster_left.png","gaster_blaster_opening@6@3.png","gaster_blaster_opening_left@6@3.png","Genos@4@7.png","GenosRight@4@7.png","HellBullet@2.png","hpbar.png","hpbarCover.png","kingkong-hpbar.png","KK-Bullet.png","KK-CannonLaser.png","KK-CannonLoading@8@8.png","KK-HAND1.png","KK-HAND2.png","KK-PART2.png","KK-PART4.png","KK-PART7.png","laytonmobile.png","Mafia1@2.png","Mafia2@2.png","Mafia3@2.png","Mafia4@2.png","Mafia5@2.png","MafiaBullet.png","MafiaBulletFlash.png","MicroPhantasmal_Sphere.png","Phantasmal_Sphere@2@5.png","PlayerShot.png","ppg_aura@19@5.png","ppg_bigbullet.png","ppg_bigBunny_left.png","ppg_bigBunny_right.png","ppg_commonbullet.png","ppg_explosivebullet@2.png","ppg_explosivebulletWarning@10@3.png","ppg_finalDoomLaser.png","ppg_hammer.png","ppg_hammerblue.png","ppg_hammerorange.png","ppg_laser.png","ppg_leftpshot.png","ppg_letter1.png","ppg_letter2.png","ppg_letter3.png","ppg_letter4.png","ppg_letter5.png","ppg_pshot.png","ppg_smallBunny_left.png","ppg_smallBunny_right.png","ppg_smallhammer.png","ppg_soul4.png","ppg_soul8.png","ppg_soul_bluesoul.png","ppg_tophat_bottom.png","ppg_tophat_left.png","ppg_tophat_right.png","redangel@4.png","Rocket.png","SmallBonus.png","smallPlatform.png","tf_commonbullet.png","tf_crystalStar.png","tf_crystyl.png","tf_crystylblaster.png","tf_explosivebullet@2.png","tf_hammerblue.png","tf_hammerorange.png","tf_letter1.png","tf_letter2.png","tf_letter3.png","tf_letter4.png","tf_lighthammer.png","tf_smallPlatform.png","tf_tophat.png","thanoscarbullet.png","thanoscarlaser.png","thanoscarportal.png","Thanosnish.png","Thanosnish@4@10.png","THEDISK@20.png","Truck.png","UltraBonus@16.png","WarudoBullet.png"];
 
     for (const file of images) {
         console.log(`-> Loaded BHsprite ${file}`);

@@ -1,5 +1,3 @@
-const { readdirSync } = nw.require('fs');
-
 	BulletHell.prototype.updateBHWaitFrames = function(a) {
 		
 		

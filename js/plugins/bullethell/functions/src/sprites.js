@@ -1,6 +1,3 @@
-const imagesDir = 'img/bhsprite';
-
-
 BulletHell.prototype.loadImages = function(name) {
 
 
