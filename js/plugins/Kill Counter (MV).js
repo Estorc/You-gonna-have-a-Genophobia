@@ -1004,12 +1004,12 @@ Spriteset_Battle.prototype.createBattleback = function() {
 	__Spriteset_Battle_createBattleback.call(this);
 	if ($gameVariables.value(1000) == 4) {
 		this._overlaySprite = new Sprite();
-		this._overlaySprite.bitmap = ImageManager.loadPicture(".nightmareOverlay");
+		this._overlaySprite.bitmap = ImageManager.loadPicture("nightmareOverlay");
 		this._baseSprite.addChild(this._overlaySprite);
 	}
 	if ($gameVariables.value(1000) == 5) {
 		this._overlaySprite = new Sprite();
-		this._overlaySprite.bitmap = ImageManager.loadPicture(".lunaticOverlay");
+		this._overlaySprite.bitmap = ImageManager.loadPicture("lunaticOverlay");
 		this._baseSprite.addChild(this._overlaySprite);
 	}
 };

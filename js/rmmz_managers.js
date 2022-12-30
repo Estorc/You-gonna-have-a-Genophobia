@@ -2960,6 +2960,8 @@ BattleManager.updateBattleEnd = function() {
 				BattleManager.playBattleBgm();
 				SceneManager.goto(Scene_Battle);
 				$gameScreen._tone = [-256,-256,-256,0]
+				AudioManager.bgmVolume = 100;
+				AudioManager.seVolume = 50;
     } else if (!this._escaped && $gameParty.isAllDead()) {
         if (this._canLose) {
             $gameParty.reviveBattleMembers();
