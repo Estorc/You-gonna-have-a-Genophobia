@@ -4,7 +4,7 @@ var fs = require('fs')
    
 const ddir = 'js/plugins/bullethell/functions/src';
 const dfile = readdirSync(`${ddir}/`).filter(files => files.endsWith('.js'));
-
+ 
 
 
 for (const file of actions) {
