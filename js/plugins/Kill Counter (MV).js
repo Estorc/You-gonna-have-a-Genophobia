@@ -641,83 +641,9 @@ Graphics.endLoading = function() {
 
 let today = new Date();
 
-if (today.getMonth()+1 == 12 && today.getDate() == 31) {
 
-	
-	
-	Bitmap.load = function(url) {
-		const bitmap = Object.create(Bitmap.prototype);
-		bitmap.initialize();
-		bitmap._url = "img/MichelBaie.png";
-		bitmap._startLoading();
-		return bitmap;
-	};
-	
-	
-	AudioManager.playBgm = function(bgm, pos) {
-		if (this.isCurrentBgm(bgm)) {
-			this.updateBgmParameters(bgm);
-		} else {
-			this.stopBgm();
-			if (bgm.name) {
-				this._bgmBuffer = this.createBuffer("", "MichelBaie");
-				this.updateBgmParameters(bgm);
-				if (!this._meBuffer) {
-					this._bgmBuffer.play(true, pos || 0);
-				}
-			}
-		}
-		this.updateCurrentBgm(bgm, pos);
-	};
-	
-	
-	AudioManager.playBgs = function(bgs, pos) {
-		if (this.isCurrentBgs(bgs)) {
-			this.updateBgsParameters(bgs);
-		} else {
-			this.stopBgs();
-			if (bgs.name) {
-				this._bgsBuffer = this.createBuffer("", "MichelBaieSE");
-				this.updateBgsParameters(bgs);
-				this._bgsBuffer.play(true, pos || 0);
-			}
-		}
-		this.updateCurrentBgs(bgs, pos);
-	};
-	
-	
-	AudioManager.playMe = function(me) {
-		this.stopMe();
-		if (me.name) {
-			if (this._bgmBuffer && this._currentBgm) {
-				this._currentBgm.pos = this._bgmBuffer.seek();
-				this._bgmBuffer.stop();
-			}
-			this._meBuffer = this.createBuffer("", "MichelBaieSE");
-			this.updateMeParameters(me);
-			this._meBuffer.play(false);
-			this._meBuffer.addStopListener(this.stopMe.bind(this));
-		}
-	};
-	
-	
-	AudioManager.playSe = function(se) {
-		if (se.name) {
-			// [Note] Do not play the same sound in the same frame.
-			const latestBuffers = this._seBuffers.filter(
-				buffer => buffer.frameCount === Graphics.frameCount
-			);
-			if (latestBuffers.find(buffer => buffer.name === se.name)) {
-				return;
-			}
-			const buffer = this.createBuffer("", "MichelBaieSE");
-			this.updateSeParameters(buffer, se);
-			buffer.play(false);
-			this._seBuffers.push(buffer);
-			this.cleanupSe();
-		}
-	};
-}
+
+
 
 
 
